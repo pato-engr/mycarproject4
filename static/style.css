@@ -1,3 +1,4 @@
+
 /* Full-page pastel background */
 body {
     margin: 0;
@@ -63,4 +64,11 @@ h2 {
     font-size: 24px;
     font-weight: bold;
     
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #5a2d8c; /* darker purple for result */
+    font-weight: bold;
 }
