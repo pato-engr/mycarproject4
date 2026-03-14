@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+</head>
+<body>
+
+<h2>Welcome to Car Price Predictor</h2>
+
+<form action="/predict" method="POST">
+
+    <label>Choose Your Car:</label><br>
+    <select name="car_name">
+        {% for c in car_names %}
+        <option value="{{ c }}">{{ c }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Purchase Year:</label><br>
+    <input type="number" name="year" min="2010" max="2025" required><br><br>
+
+    <label>KMs Driven:</label><br>
+    <input type="number" name="km_driven" min="100" max="300000" required><br><br>
+
+    <label>Fuel Type:</label><br>
+    <select name="fuel_type">
+        {% for f in fuel_types %}
+        <option value="{{ f }}">{{ f }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Seller Type:</label><br>
+    <select name="seller_type">
+        {% for s in seller_types %}
+        <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Transmission:</label><br>
+    <select name="transmission">
+        {% for t in transmissions %}
+        <option value="{{ t }}">{{ t }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Owner:</label><br>
+    <select name="owner">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="3">3</option>
+    </select><br><br>
+
+    <button type="submit">Predict Price</button>
+</form>
+
+</body>
+</html>
