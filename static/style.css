@@ -59,7 +59,7 @@ button:hover {
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: auto;
     color: #5a2d8c; /* darker purple for headings */
     font-size: 24px;
     font-weight: bold;
